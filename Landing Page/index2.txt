@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | Digital Agency Portfolio Page</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">Cineholic Helper </div>
+      <ul class="nav__links">
+        <li class="link"><a href="#">About</a></li>
+        <li class="link"><a href="#">Hollywood</a></li>
+        <li class="link"><a href="#">Bollywood</a></li>
+        <li class="link"><a href="#">Tollywood</a></li>
+        <li class="link"><a href="#" class="contact__btn">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <div class = "para1">
+        <p>
+          From thrilling escapes to thought-provoking mirrors of society, cinema captivates us. 
+          It entertains with laughter and tears, teaches through diverse stories, and sparks empathy for different experiences. Powerful films can even inspire change, while shared screenings connect us through emotions and discussions. Whether it's pure enjoyment, cultural understanding, or artistic inspiration, cinema enriches our lives in countless ways. 
+          What will your next cinematic journey bring?
+        </p>
+      </div>
+      <div class="header__container">
+        <div class="header__content">
+          <h1>
+            Discover Your Next Favorite Movie <br /> with our <br />Expert Recommendations!</span>
+          </h1>
+          <a href="#" class="start__project">Start a project</a>
+        </div>
+        <div class="footer__cards">
+          <div class="card">
+            <h4>Thriller</h4>
+            <p>
+              Keeps you on the edge of your seat with suspense, mystery, and danger. 
+              It often involves hidden agendas, conspiracies, and thrilling chases.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Sci-Fi</h4>
+            <p>
+              Explores futuristic technologies, space travel, and fantastical worlds, often questioning humanity's place in the universe.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Romance</h4>
+            <p>
+              Focuses on love stories, navigating themes of attraction, intimacy, and personal growth. Can be lighthearted comedies, tearjerking dramas, or passionate epics.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Animation</h4>
+            <p>
+              Uses various techniques to create moving images, telling stories for all ages. Can range from fantastical adventures to humorous parodies to coming-of-age tales.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Documentary</h4>
+            <p>
+              Presents factual information through real-life stories, historical events, and social issues. Aims to educate, inspire, and challenge viewers' perspectives.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Comedy</h4>
+            <p>
+              Aims to make you laugh with humor in various forms, from slapstick and witty dialogue to satire and observational humor. Can be lighthearted fun or delve into deeper social commentary.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+:root {
+  --primary-color: #b45309;
+  --extra-light: #f3f4f6;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #3b0101;
+  color: #fff;
+}
+
+.nav__logo {
+  font-size: 3em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: oblique;
+  color: #ffcc00;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  position: relative;
+  cursor: pointer;
+}
+
+.link a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover a {
+  color: #ffcc00;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ffcc00; 
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+  transform-origin: right center;
+}
+a.contact__btn {
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--extra-light);
+  position: relative;
+}
+
+.contact__btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -40%;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 50%;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+header {
+  background-image: url("bg.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.para1{
+  position:static;
+  color: antiquewhite;
+  background-color: #aea80f58;
+  font-size: x-large;
+  min-height: 1cap;
+  max-width: max-content;
+  padding: 5cap;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 40px auto;
+  margin-top: 100px;
+
+}
+
+.search-label {
+  margin-right: 100px;
+  color: #666; 
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.search-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #520505; 
+  color: #fff;
+  border: none;
+  cursor: wait;
+}
+
+.search-button:hover {
+  background-color: hwb(0 24% 33%); 
+}
+.header__container {
+  position: relative;
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.header__content {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header__content h1 {
+  font-size: 0.1rem;
+  line-height: 4rem;
+  font-weight: 300;
+  color: var(--extra-light);
+}
+
+.header__content h1 span {
+  color: var(--primary-color);
+}
+
+.header__content .start__project {
+  text-decoration: none;
+  margin-top: 2rem;
+  color: var(--extra-light);
+  font-weight: 600;
+  position: relative;
+}
+
+.footer__cards {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgba(76, 1, 1, 0.542);
+  color: var(--extra-light);
+  height: 150px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.card h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.card h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card p {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+@media (min-width: 640px) {
+  .header__container {
+    min-height: 400vh;
+  }
+
+  .header__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .header__content h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .footer__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 780px) {
+  .nav__links {
+    display: flex;
+  }
+
+  .header__container {
+    min-height: 100vh;
+  }
+
+  .header__content h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+
+  .footer__cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .card {
+    height: 60px;
+  }
+
+  .card:hover {
+    height: 250px;
+  }
+}
